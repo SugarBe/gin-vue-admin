@@ -50,10 +50,10 @@ func (i *DBApi) CheckDB(c *gin.Context) {
 		needInit = true
 	)
 
-	if global.GVA_DB != nil {
-		message = "数据库无需初始化"
-		needInit = false
-	}
+	//if global.GVA_DB != nil {
+	//	message = "数据库无需初始化"
+	//	needInit = false
+	//}
 	global.GVA_LOG.Info(message)
 	response.OkWithDetailed(gin.H{"needInit": needInit}, message, c)
 }
